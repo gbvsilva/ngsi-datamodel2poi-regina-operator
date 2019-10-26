@@ -1,0 +1,12 @@
+{
+  "name": "ngsi-datamodel2poi-regina",
+  "dependencies": {
+    "jquery": "^3.0.0"
+  },
+  "devDependencies": {},
+  "exportsOverride": {
+    "jquery": {
+      "js": "dist/jquery.min.js"
+    }
+  }
+}

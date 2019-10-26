@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="REGINA-Lab" name="ngsi-datamodel2poi-regina" version="0.1.0">
+
+    <details>
+        <title>FIWARE data model To PoI</title>
+        <homepage>https://github.com/gbvsilva/ngsi-datamodel2poi-regina-operator</homepage>
+        <authors>gbvsilva &lt;graco.babeuf18@gmail.com&gt;</authors>
+        <email>graco.babeuf18@gmail.com</email>
+        <image>images/regina_logo.png</image>
+        <smartphoneimage></smartphoneimage>
+        <description>Convert NGSI entities using any of the available FIWARE data models into Point of Interests (usable by map widgets).</description>
+        <longdescription>DESCRIPTION.md</longdescription>
+        <changelog>doc/changelog.md</changelog>
+        <doc>doc/userguide.md</doc>
+        <license>MIT</license>
+        <issuetracker>https://github.com/gbvsilva/ngsi-datamodel2poi-regina-operator/issues</issuetracker>
+    </details>
+
+    <requirements>
+        <!-- Add any extra requirements here -->
+        <!-- <feature name="${feature-name}" /> -->
+    </requirements>
+
+    <preferences>
+    </preferences>
+
+    <wiring>
+        <outputendpoint name="poiOutput" type="text" label="PoIs" description="Transformed Points of Interests from the received entities" friendcode="poi"/>
+        <inputendpoint name="entityInput" type="text" label="Entities" description="Received entities will be transform into PoIs" friendcode="entity"/>
+    </wiring>
+
+    <scripts>
+        <script src="lib/js/moment-with-locales.min.js"/>
+        <script src="js/main.js"/>
+    </scripts>
+
+</operator>
