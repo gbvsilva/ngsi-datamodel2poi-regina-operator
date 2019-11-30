@@ -108,7 +108,7 @@
     var renderSensor = function renderSensor(entity, coordinates) {
         var icon, hash;
 
-        if(entity.id.match(/Regina/g)) {
+        if(entity.id.match(/Regina/g) || entity.id.match(/ESP/g)) {
         	icon = "sensor";
         	hash = "regina:datamodel2poi:sensor";
     	}else {
@@ -143,7 +143,8 @@
 
     var builders = {
         // Sensors
-        "Sensor": renderSensor
+        "Sensor": renderSensor,
+        "SensorESP": renderSensor
     };
 
 
