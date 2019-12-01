@@ -108,10 +108,13 @@
     var renderSensor = function renderSensor(entity, coordinates) {
         var icon, hash;
 
-        if(entity.id.match(/Regina/g) || entity.id.match(/ESP/g)) {
+        if(entity.id.match(/Regina/g)) {
         	icon = "sensor";
         	hash = "regina:datamodel2poi:sensor";
-    	}else {
+    	}else if(entity.id.match(/ESP/g)) {
+            icon = "esp";
+            hash = "esp:datamodel2poi:sensor";
+        }else {
     		icon = "generic";
     		hash = "generic:datamodel2poi:sensor";
     	}
@@ -122,7 +125,7 @@
                 hash: hash,
                 anchor: [0.5, 1],
                 scale: 1.0,
-                src: internalUrl('images/regina/' + icon + '.png')
+                src: internalUrl('images/PoIs/' + icon + '.png')
             },
             tooltip: entity.id,
             data: entity,
